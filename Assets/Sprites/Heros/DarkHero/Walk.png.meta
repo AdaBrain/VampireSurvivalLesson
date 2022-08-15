@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bdfb318db22c4ae2b2373827beb5952
-      internalID: -1915025112
+      spriteID: f81eed4ddb11a4f3989a7365318ddb51
+      internalID: -704669264
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 331980a006faa449a85e7152ce8637f5
-      internalID: -1232495775
+      spriteID: 4079cfa471cf54045b7bc8d0e79c5eac
+      internalID: 581908020
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28cae027239674c6ca10178084f5a265
-      internalID: -1057514596
+      spriteID: 3c49e330c833c4fa69002bb0c64f8cba
+      internalID: -847981751
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def177a408cf447acb6ae6b18c5cfe79
-      internalID: 395577341
+      spriteID: 818c455601a3746daae75dc0932f58b8
+      internalID: 626340867
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30fe1ec55c26d43f1951a5d4b371ba69
-      internalID: 956946900
+      spriteID: 1aee3125ba617450ca1d79e4fbdcca65
+      internalID: 680312005
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63fbe4b1388aa4d06af5d741bedc9569
-      internalID: -1095557800
+      spriteID: d8439161d2c8b4f18b30489a5d53ba02
+      internalID: 1962579529
       vertices: []
       indices: 
       edges: []
@@ -254,12 +254,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walk_5: -1095557800
-      Walk_0: -1915025112
-      Walk_4: 956946900
-      Walk_2: -1057514596
-      Walk_3: 395577341
-      Walk_1: -1232495775
+      Walk_5: 1962579529
+      Walk_0: -704669264
+      Walk_4: 680312005
+      Walk_2: -847981751
+      Walk_3: 626340867
+      Walk_1: 581908020
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
