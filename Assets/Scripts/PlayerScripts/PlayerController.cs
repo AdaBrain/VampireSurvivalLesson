@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControll1 : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5.0f;
     [SerializeField] float cooldown = 1.0f;
