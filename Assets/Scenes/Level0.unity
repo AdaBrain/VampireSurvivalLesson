@@ -743,6 +743,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!224 &1529755118 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2035683604155791346, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+  m_PrefabInstance: {fileID: 5117816151404809752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1595284172
 GameObject:
   m_ObjectHideFlags: 0
@@ -8863,21 +8868,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3753785357456776315, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+      propertyPath: HPBar
+      value: 
+      objectReference: {fileID: 1529755118}
     - target: {fileID: 5295083943429757259, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.248
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
