@@ -743,25 +743,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1093649168 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5295083943429757259, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
-  m_PrefabInstance: {fileID: 5117816151404809752}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1093649175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093649168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ce65dab85e948e1a0f3307ae447d18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  cooldown: 1
 --- !u!1 &1595284172
 GameObject:
   m_ObjectHideFlags: 0
@@ -8885,6 +8866,18 @@ PrefabInstance:
     - target: {fileID: 5295083943429757259, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471574707896481478, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.248
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
