@@ -9618,6 +9618,10 @@ PrefabInstance:
       propertyPath: HPBar
       value: 
       objectReference: {fileID: 1529755118}
+    - target: {fileID: 4272062455140060725, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
+      propertyPath: m_TagString
+      value: PlayerHPMask
+      objectReference: {fileID: 0}
     - target: {fileID: 5295083943429757259, guid: 698fe04891b1c4693b1e67f6031884be, type: 3}
       propertyPath: m_Name
       value: Player

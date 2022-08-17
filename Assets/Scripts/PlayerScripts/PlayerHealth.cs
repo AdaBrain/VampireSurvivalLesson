@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
     [SerializeField] private float health = 100.0f;
     [SerializeField] private float maxHealth = 100.0f;
     [SerializeField] private bool isDie = false;
-    [SerializeField] private RectTransform HPBar;
+    private RectTransform HPBar;
 
     // Properties
     public float Health {
@@ -26,6 +26,13 @@ public class PlayerHealth : MonoBehaviour, IHealth
     
 
     // Methods
+    void Start()
+    {
+        HPBar = GameObject
+            .FindGameObjectWithTag("PlayerHPMask")
+            .GetComponent<RectTransform>();
+    }
+
     void Update()
     {
         SetHPBar();
