@@ -7,18 +7,29 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 5.0f;
     [SerializeField] float cooldown = 1.0f;
-
+    
     private Rigidbody2D rb2d;
     private SpriteRenderer sr;
     private Animator anim;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         rb2d = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         StartCoroutine(AutoSkill());
+     
+    }
+
+    void Awake()
+    {
+        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
+        if (playerObjects.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
