@@ -49,24 +49,7 @@ public class PlayerController : MonoBehaviour
 
 	private void UseSkill()
 	{
-		GameObject cloneSkill = Instantiate(SkillPrefab, transform.position, Quaternion.identity);
-		ISkill skill = cloneSkill.GetComponent<PassiveSkill>();
-
-		StartCoroutine(UpdateSkillPosition(cloneSkill));
-		Destroy(cloneSkill, skill.Cooldown);
-	}
-
-	private IEnumerator UpdateSkillPosition(GameObject skillClone)
-	{
-		while (skillClone is not null) {
-			Vector3 playerPosition = transform.position;
-			try {
-				skillClone.transform.position = playerPosition;
-			} catch {
-				break;
-			}
-			yield return new WaitForSeconds(0.01f);
-		}
+		GameObject cloneSkill =
 	}
 
 	private void Movements()

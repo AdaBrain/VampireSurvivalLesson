@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4272062455140060725
+--- !u!1 &1348677691520913383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,28 +8,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2035683604155791346}
-  - component: {fileID: 2639891627460783221}
+  - component: {fileID: 6547882723279432735}
+  - component: {fileID: 3340304306146042122}
   m_Layer: 0
   m_Name: HPMask
-  m_TagString: PlayerHPMask
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2035683604155791346
+--- !u!224 &6547882723279432735
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4272062455140060725}
+  m_GameObject: {fileID: 1348677691520913383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6471574707896481478}
+  m_Father: {fileID: 538040108390697278}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -37,13 +37,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!331 &2639891627460783221
+--- !u!331 &3340304306146042122
 SpriteMask:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4272062455140060725}
+  m_GameObject: {fileID: 1348677691520913383}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4474242552243787456}
   - component: {fileID: 8373333664083558577}
   - component: {fileID: 3875886234143612317}
-  - component: {fileID: 3753785357456776315}
+  - component: {fileID: 6362540544635690702}
   - component: {fileID: 1093649175}
   m_Layer: 0
   m_Name: Player
@@ -122,10 +122,10 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6471574707896481478}
   - {fileID: 353745695110382421}
+  - {fileID: 538040108390697278}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9180800074952279201
 SpriteRenderer:
@@ -192,7 +192,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -246,7 +246,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3753785357456776315
+--- !u!114 &6362540544635690702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,12 +255,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5295083943429757259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fe92118abec4ac0b8482218e48e54b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7297aee26846c4e4b9fd6fd7141094bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  isDie: 0
+  maxHP: 100
+  curHP: 100
+  hpMask: {fileID: 1348677691520913383}
+  DeadEffectPrefab: {fileID: 2127074516518058032, guid: afd91c83c159a4098b0ce01fede66b76, type: 3}
 --- !u!114 &1093649175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,8 +275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  cooldown: 7
---- !u!1 &7499471049450278888
+  cooldown: 2
+  SkillPrefab: {fileID: 5493007727957935458, guid: f920d48c61d4f4d39baf3cf19c076673, type: 3}
+--- !u!1 &6227136396803391813
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,8 +285,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6471574707896481478}
-  - component: {fileID: 4808643575244917866}
+  - component: {fileID: 538040108390697278}
+  - component: {fileID: 3473025193222242345}
   m_Layer: 0
   m_Name: HPBar
   m_TagString: Untagged
@@ -292,29 +294,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6471574707896481478
+--- !u!4 &538040108390697278
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7499471049450278888}
+  m_GameObject: {fileID: 6227136396803391813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.001, y: 0.2472, z: -1}
-  m_LocalScale: {x: 0.3, y: 0.03, z: 1}
+  m_LocalPosition: {x: 0.01, y: 0.2569, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.041470144, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2035683604155791346}
+  - {fileID: 6547882723279432735}
   m_Father: {fileID: 3068143480603892572}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4808643575244917866
+--- !u!212 &3473025193222242345
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7499471049450278888}
+  m_GameObject: {fileID: 6227136396803391813}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -350,7 +352,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.111662865, a: 1}
+  m_Color: {r: 0, g: 0.99215686, b: 0.036429435, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -386,7 +388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8038149035519001892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1879538, y: 0.010311207, z: -3.795496}
+  m_LocalPosition: {x: 0.026, y: 0.010311207, z: -3.795496}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []

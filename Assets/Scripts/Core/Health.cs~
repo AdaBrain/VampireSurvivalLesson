@@ -1,0 +1,61 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace AdaBrain.Core
+{
+	public class Health : MonoBehaviour
+	{
+		// Fields
+		[SerializeField] private float maxHP;
+		[SerializeField] private float curHP;
+		[SerializeField] GameObject hpMask;
+
+		private RectTransform hpMaskTransform;
+
+		public float MaxHP { get => maxHP; set => maxHP = value; }
+		public float CurHP {
+			get => curHP;
+			set {
+				if (value < 0) curHP = 0;
+				else if (value > maxHP) curHP = maxHP;
+				else {
+					curHP = value;
+				}
+			}
+		}
+
+		void Start()
+		{
+			hpMaskTransform = hpMask.GetComponent<RectTransform>();
+		}
+
+		void Update()
+		{
+			UpdateHPBar();
+		}
+
+		private void UpdateHPBar()
+		{
+			// Max scale = 0, Min scale = -1
+			float ratio = (curHP / maxHP) - 1;
+			Vector3 newPosition = new Vector3(ratio, 0, 0);
+			hpMaskTransform.localPosition = newPosition;
+		}
+
+		public void TakeDamage(float damage)
+		{
+			CurHP -= damage;
+
+			if (CurHP <= 0) {
+				OnDead();
+			}
+		}
+
+		private void OnDead()
+		{
+			Destroy(gameObject);
+		}
+	}
+}

@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace AdaBrain.Managers
+{
+	public class EnemyManager : MonoBehaviour
+	{
+		[SerializeField] GameObject enemyPrefab;
+		[SerializeField] GameObject[] LootItems;
+		[SerializeField] float waveDuration = 1.0f;
+		[SerializeField] Vector2 minOrigin;
+		[SerializeField] Vector2 maxOrigin;
+
+		void Start()
+		{
+			StartCoroutine(EnemyGenerator());
+		}
+
+		private IEnumerator EnemyGenerator()
+		{
+			while (true) {
+				float randX = Random.Range(minOrigin.x, maxOrigin.x);
+				float randY = Random.Range(minOrigin.y, maxOrigin.y);
+
+				Vector3 randOrigin = new Vector3(randX, randY, -4);
+				GameObject enemyClone = Instantiate(enemyPrefab, randOrigin, Quaternion.identity);
+
+				yield return new WaitForSeconds(waveDuration);
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using AdaBrain.Core;
+using AdaBrain.Managers;
+
+public class MonsterHealth : Health
+{
+	private EnemyManager enemyManager;
+	// Start is called before the first frame update
+	void Start()
+	{
+		enemyManager = GetComponent<EnemyManager>();
+		HpMaskTransform = GetComponent<RectTransform>();
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+		UpdateHPBar();
+	}
+
+	public override void OnDead()
+	{
+		base.OnDead();
+
+		// Drop loot item
+		int ItemSize = enemyManager.LootItems.Length;
+		int randomItemIdx = Random.Range(0, ItemSize);
+	}
+}
