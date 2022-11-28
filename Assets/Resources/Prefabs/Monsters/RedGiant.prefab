@@ -36,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 955872489870733191}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3413671026876177394
 SpriteRenderer:
@@ -179,6 +179,10 @@ MonoBehaviour:
   curHP: 100
   hpMask: {fileID: 3738273315225939498}
   DeadEffectPrefab: {fileID: 2127074516518058032, guid: afd91c83c159a4098b0ce01fede66b76, type: 3}
+  _damageTextDelay: 2
+  _damageTextPrefab: {fileID: 3785055118529936699, guid: 779dee63e35ed4c92bb8cdd5ff2f918a, type: 3}
+  _forceFactor: 2
+  _floatingPath: {x: -0.5, y: 1}
 --- !u!1 &3738273315225939498
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,7 +213,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 955872489870733191}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -298,7 +302,7 @@ Transform:
   m_Children:
   - {fileID: 5188303325869677022}
   m_Father: {fileID: 3413671026876177395}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8350547482152241999
 SpriteRenderer:

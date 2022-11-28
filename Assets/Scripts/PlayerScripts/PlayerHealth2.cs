@@ -16,4 +16,9 @@ public class PlayerHealth2 : Health
 	{
 		UpdateHPBar();
 	}
+
+	public override void OnDead()
+	{
+		UIManager.Instance.ShowDeadCanvas();
+	}
 }

@@ -13,7 +13,8 @@ public class PassiveSkill : MonoBehaviour, ISkill
 	public void TakeDamage(GameObject enemy)
 	{
 		Health enemyHealth = enemy.GetComponent<Health>();
-		enemyHealth.TakeDamage(damage);
+		float multiplier = Random.Range(0.0f, 1.0f);
+		enemyHealth.TakeDamage(multiplier * damage);
 	}
 
 	// Update is called once per frame
@@ -24,7 +25,8 @@ public class PassiveSkill : MonoBehaviour, ISkill
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Enemy")) {
+		if (collision.CompareTag("Enemy"))
+		{
 			TakeDamage(collision.gameObject);
 		}
 	}
